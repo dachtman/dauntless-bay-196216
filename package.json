@@ -1,0 +1,16 @@
+{
+  "name": "farmfresh",
+  "version": "1.0.0",
+  "description": "",
+  "private":true,
+  "repository":"https://github.com/dachtman/dauntless-bay-196216"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dachtman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
