@@ -2,15 +2,17 @@
   "name": "farmfresh",
   "version": "1.0.0",
   "description": "",
-  "private":true,
-  "repository":"https://github.com/dachtman/dauntless-bay-196216"
-  "main": "index.js",
+  "private": true,
+  "repository": "https://github.com/dachtman/dauntless-bay-196216",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "dachtman",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
+    "mysql": "^2.15.0"
   }
 }
