@@ -1,18 +1,21 @@
 {
-  "name": "farmfresh",
-  "version": "1.0.0",
-  "description": "",
-  "private": true,
-  "repository": "https://github.com/dachtman/dauntless-bay-196216",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "author": "dachtman",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.2",
-    "moment": "^2.20.1",
-    "moment-timezone": "^0.5.14",
-    "mysql": "^2.15.0"
-  }
+	"name": "farmfresh",
+	"version": "1.0.0",
+	"description": "",
+	"private": true,
+	"repository": "https://github.com/dachtman/dauntless-bay-196216",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"author": "dachtman",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.18.2",
+		"express": "^4.16.2",
+		"express-useragent": "^1.0.12",
+		"knex": "^0.14.4",
+		"moment": "^2.20.1",
+		"moment-timezone": "^0.5.14",
+		"mysql": "^2.15.0"
+	}
 }
