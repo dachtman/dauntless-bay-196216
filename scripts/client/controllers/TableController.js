@@ -29,6 +29,15 @@ angular.module('FarmFridgeInterview')
 			chart.addRow([d.ip_address,d.timestamp,d.headline,d.button]);
 		});
 		var table = new google.visualization.Table(document.getElementById('chart-div'));
-        table.draw(chart, {showRowNumber: true, width: '100%', height: '100%'});
+        table.draw(chart, {
+        	showRowNumber: false,
+        	width: '100%',
+        	height: '100%',
+			alternatingRowStyle : false,
+			sortColumn : 1,
+			page : "enable",
+			sortAscending : false,
+			pageSize : 20
+        });
 	}
 }]);

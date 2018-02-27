@@ -25,13 +25,23 @@
 			</nav>
 		</div>
 		<div ng-controller="HomeController">
-			<div class="jumbotron jumbotron-fluid" ng-if="!loading">
-  				<div class="container">
-  					<h1 class="display-4">{{display_text.headline}}</h1>
-  				</div>
-			</div>
-			<div class="container">
-	  			<button class="btn btn-dark" ng-click="storeButtonClick()">{{display_text.button}}</button>
+			<div ng-if="!loading">
+				<div class="jumbotron jumbotron-fluid" >
+	  				<div class="container">
+	  					<div class="alert alert-success" role="alert" ng-if="show_data_addded_bar">
+	  						Your data has been succesfully stored, thanks for participating
+						</div>
+	  					<h1 class="display-3" ng-if="!button_pressed" >{{::display_text.headline}}</h1>
+	  					<h1 class="display-3" ng-if="button_pressed" >Thanks for playing!!</h1>
+						<h1 class="display-4" ng-if="button_pressed" >To play again reload your page or hit the button below</h1>
+	  				</div>
+				</div>
+				<div class="container" ng-if="!button_pressed">
+		  			<button class="btn btn-dark" ng-click="storeButtonClick()">{{::display_text.button}}</button>
+	  			</div>
+	  			<div class="container" ng-if="button_pressed">
+		  			<button class="btn btn-dark" ng-click="reloadPage()">Reload</button>
+	  			</div>
   			</div>
 		</div>
 		<script src="/public/FarmFridgeInterview.js"></script>

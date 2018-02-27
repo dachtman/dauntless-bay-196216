@@ -3,6 +3,8 @@
 angular.module('FarmFridgeInterview')
 .controller('HomeController',['$scope','$http','$timeout','$window',function($scope,$http,$timeout,$window){
 	$scope.loading = true;
+	$scope.show_data_addded_bar = false;
+	$scope.button_pressed = false;
 	$scope.display_text = {
 		headline : "",
 		button : ""
@@ -25,14 +27,22 @@ angular.module('FarmFridgeInterview')
 		},2000);
 	});
 	
+	$scope.reloadPage = function(){
+		$window.location.reload();
+	}
+	
 	$scope.storeButtonClick = function(){
 		$http.post("/data/button_pressers",{
 			headline : $scope.display_text.headline,
 			button : $scope.display_text.button
 		}).then(function(resp){
-			
+			$scope.show_data_addded_bar = true;	
+			$scope.button_pressed = true;
+			$timeout(function(){
+				$scope.show_data_addded_bar = false;
+			},5000);
 		},function(resp){
-			
+			console.error(resp);
 		});
 	};
 	
