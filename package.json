@@ -14,8 +14,6 @@
 		"express": "^4.16.2",
 		"express-useragent": "^1.0.12",
 		"knex": "^0.14.4",
-		"moment": "^2.20.1",
-		"moment-timezone": "^0.5.14",
 		"mysql": "^2.15.0"
 	}
 }

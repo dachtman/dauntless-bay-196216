@@ -1,16 +1,13 @@
 /*eslint-disable no-param-reassign */
 'use strict';
-const moment = require('moment');
 const Knex = require('knex');
 
 function insertVisitor(connection,visitorInfo,ipAddress){
-	visitorInfo.ip_address = ipAddress;
-	visitorInfo.timestamp = moment().toString();
+	visitorInfo.ip_address = cleanIP(ipAddress);
 	return insertData(connection, visitorInfo, "visitors");
 }
 function insertButtonPresser(connection,presserInfo,ipAddress){
-	presserInfo.ip_address = ipAddress;
-	presserInfo.timestamp = moment().toString();
+	presserInfo.ip_address = cleanIP(ipAddress);
 	return insertData(connection, presserInfo, "button_pressers");
 }
 function getRandomNumber(min, max, round){
@@ -21,7 +18,12 @@ function getRandomNumber(min, max, round){
 	}
 	return rand;
 }
-
+function cleanIP(ipAddress){
+	if (ipAddress.substr(0, 7) == "::ffff:") {
+		ipAddress = ipAddress.substr(7)
+	}
+	return ipAddress;
+}
 function getText(connection, randNum, randNum2){
 	randNum = randNum || getRandomNumber(1,50);
 	randNum2 = randNum2 || getRandomNumber(1,50);

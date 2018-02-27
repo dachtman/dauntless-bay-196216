@@ -33,4 +33,3 @@ beta_settings:
   cloud_sql_instances: dauntless-bay-196216:us-central1:farm-fridge-job-interview
 # [END cloudsql_settings]
 # [END app_yaml]
-ca

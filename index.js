@@ -77,7 +77,7 @@ app.post('/data/:table',function(req,res){
 if (module === require.main) {
   const server = app.listen(process.env.PORT || 8080, function() {
     const port = server.address().port;
-    console.log(`App listening on port ${port}`);
+    console.log('App listening on port ' + port);
   });
 }
 

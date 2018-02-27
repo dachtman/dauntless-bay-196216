@@ -34,7 +34,8 @@ angular.module('FarmFridgeInterview')
 	$scope.storeButtonClick = function(){
 		$http.post("/data/button_pressers",{
 			headline : $scope.display_text.headline,
-			button : $scope.display_text.button
+			button : $scope.display_text.button,
+			timestamp : new Date().toLocaleString()
 		}).then(function(resp){
 			$scope.show_data_addded_bar = true;	
 			$scope.button_pressed = true;
@@ -49,11 +50,8 @@ angular.module('FarmFridgeInterview')
 	function storeVisitor(headline,button){
 		$http.post("/data/visitors",{
 			headline : headline,
-			button : button
-		}).then(function(resp){
-			
-		},function(resp){
-			
-		});		
+			button : button,
+			timestamp : new Date().toLocaleString()
+		}).then(function(resp){},function(resp){});		
 	}
 }]);
