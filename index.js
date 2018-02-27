@@ -7,6 +7,7 @@ const db = require( './scripts/server/db-sql.js' );
 
 app.use( '/public', express.static( __dirname + '/scripts/client' ) );
 app.use( '/templates', express.static( __dirname + '/pages/templates' ) );
+app.set( 'trust proxy', 'loopback' );
 app.use( bodyParser.urlencoded( {
 	extended: true
 } ) );
