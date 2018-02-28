@@ -6,11 +6,7 @@
 	"repository": "https://github.com/dachtman/dauntless-bay-196216",
 	"scripts": {
 	    "start": "node index.js",
-	    "setUser" : "SQL_USER=root",
-	    "setPassword" : "SQL_PASSWORD=farmfridgeinterview",
-	    "setDB" : "SQL_DATABASE=farm_fridge_DB",
-	    "connectToSql" : "gcloud sql connect farm-fridge-job-interview --user=root",
-	    "cloudStart" : "npm run setUser"
+	    "test" : "SQL_USER=root SQL_PASSWORD=farmfridgeinterview SQL_DATABASE=farm_fridge_DB node index.js"
 	},
 	"author": "dachtman",
 	"license": "ISC",
