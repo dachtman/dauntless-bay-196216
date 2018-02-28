@@ -6,7 +6,7 @@
 	"repository": "https://github.com/dachtman/dauntless-bay-196216",
 	"scripts": {
 	    "start": "node index.js",
-	    "test" : "SQL_USER=root SQL_PASSWORD=farmfridgeinterview SQL_DATABASE=farm_fridge_DB node index.js"
+	    "DevStart" : "SQL_USER=root SQL_PASSWORD=farmfridgeinterview SQL_DATABASE=farm_fridge_DB node index.js"
 	},
 	"author": "dachtman",
 	"license": "ISC",
