@@ -5,8 +5,8 @@
 	"private": true,
 	"repository": "https://github.com/dachtman/dauntless-bay-196216",
 	"scripts": {
-	    "start": "node index.js",
-	    "DevStart" : "SQL_USER=root SQL_PASSWORD=farmfridgeinterview SQL_DATABASE=farm_fridge_DB node index.js"
+		"start": "node index.js",
+		"DevStart": "cross-env SQL_USER=root cross-env SQL_PASSWORD=farmfridgeinterview cross-env SQL_DATABASE=farm_fridge_DB node index.js"
 	},
 	"author": "dachtman",
 	"license": "ISC",
@@ -16,5 +16,8 @@
 		"express-useragent": "^1.0.12",
 		"knex": "^0.14.4",
 		"mysql": "^2.15.0"
+	},
+	"devDependencies": {
+		"cross-env": "^5.1.3"
 	}
 }

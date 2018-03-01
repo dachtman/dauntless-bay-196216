@@ -15,6 +15,9 @@ app.use( bodyParser.json() );
 app.get( '/', function ( req, res ) {
 	getPage( res, "home" );
 } );
+app.get( '/statistics', function ( req, res ) {
+	getPage( res, "stats" );
+} );
 app.get( '/visitors', function ( req, res ) {
 	getPage( res, "table" );
 } );
@@ -66,7 +69,6 @@ app.post( '/data/:table', function ( req, res ) {
 			req.connection.remoteAddress ||
 			req.socket.remoteAddress ||
 			req.connection.socket.remoteAddress ).split( "," )[ 0 ];
-		console.log( ip );
 		var result = db[ functionName ]( connection, body, ip );
 		result.then( function ( r ) {
 			res.sendStatus( 200 );

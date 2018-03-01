@@ -15,5 +15,9 @@ angular.module('FarmFridgeInterview')
 		name : "Button Pressers",
 		url : "/button_pressers",
 		active : pathName === "/button_pressers"
+	},{
+		name : "Statistics",
+		url : "/statistics",
+		active : pathName === "/statistics"
 	}];
 }]);
